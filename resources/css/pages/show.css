@@ -1,0 +1,55 @@
+/* resources/css/pages/show.css */
+.post-details {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.post-content {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.post-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+.post-text {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.post-meta {
+    font-size: 0.95rem;
+    color: #888;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.post-meta p {
+    margin: 0 0 10px;
+}

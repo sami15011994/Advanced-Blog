@@ -1,12 +1,29 @@
 {
     "private": true,
     "scripts": {
-        "dev": "vite",
-        "build": "vite build"
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "build": "vite build",
+        "preview": "vite preview"
     },
     "devDependencies": {
+        "@tailwindcss/forms": "^0.5.2",
+        "@vitejs/plugin-vue": "^5.0.5",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
         "axios": "^1.1.2",
-        "laravel-vite-plugin": "^0.7.2",
-        "vite": "^4.0.0"
+        "laravel-mix": "^6.0.49",
+        "laravel-vite-plugin": "^1.0.5",
+        "postcss": "^8.4.31",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.77.8",
+        "sass-loader": "^12.1.0",
+        "tailwindcss": "^3.1.0",
+        "vite": "^5.3.4",
+        "webpack": "^5.93.0",
+        "webpack-cli": "^5.1.4"
     }
 }

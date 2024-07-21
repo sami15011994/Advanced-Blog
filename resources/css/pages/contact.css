@@ -1,0 +1,65 @@
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Style pour le conteneur principal */
+#main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour le titre */
+h1 {
+    text-align: center;
+    color: #4a90e2;
+}
+
+/* Style pour le formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Style pour les étiquettes */
+label {
+    font-weight: bold;
+}
+
+/* Style pour les champs de saisie */
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Style pour le textarea */
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Style pour les boutons */
+button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ab8;
+}

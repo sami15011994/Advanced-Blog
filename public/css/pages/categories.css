@@ -1,0 +1,80 @@
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+/* Style pour le conteneur principal */
+#main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Style pour le titre */
+h1 {
+    text-align: center;
+    color: #4a90e2;
+}
+/* Style pour le formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* Style pour les étiquettes */
+label {
+    font-weight: bold;
+}
+/* Style pour le select */
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+/* Style pour les boutons */
+button {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    
+    color: #357ab8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #357ab8;
+}
+/* Style pour les conteneurs de posts */
+#postsContainer {
+    margin-top: 20px;
+}
+#postsContainer ul {
+    list-style-type: none;
+    padding: 0;
+}
+#postsContainer li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+/* Style pour la pagination */
+#paginationControls {
+    margin-top: 20px;
+    text-align: center;
+}
+#paginationControls button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #f4f4f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#paginationControls button:hover {
+    background-color: #e2e2e2;
+}
+

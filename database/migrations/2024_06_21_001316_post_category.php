@@ -16,8 +16,8 @@ return new class extends Migration
 			$table->unsignedBigInteger('category_id');
 			$table->timestamps();
 			$table->primary(['post_id', 'category_id']);
-			$table->foreign('post_id')->references('id')->on('posts');
-			$table->foreign('category_id')->references('id')->on('categories');
+			 $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('post_id')->references('id')->on('posts');
 			$table->boolean('is_primary')->default(false); //Additional attribute
 });
     }
