@@ -1,5 +1,5 @@
 @extends('layout')
-
+<title>@yield('title', 'Categories')</title>
 @section('main')
     <h1>Choisir une catégorie</h1>
  

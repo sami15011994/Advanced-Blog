@@ -2,22 +2,28 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProfileUpdateRequest;
-use Illuminate\Http\RedirectResponse;
+//use auth;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\View\View;
+use App\Http\Requests\ProfileUpdateRequest;
 
 class ProfileController extends Controller
 {
+    public function index(){
+        $user = auth::user();
+        return view('profile.index', compact('user'));
+    }
     /**
      * Display the user's profile form.
      */
     public function edit(Request $request): View
     {
+        $user =auth::user();
         return view('profile.edit', [
-            'user' => $request->user(),
+            'user' => $user,
         ]);
     }
 

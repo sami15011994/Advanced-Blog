@@ -1,4 +1,5 @@
 @extends('layout')
+
 @section('title','nouvelle post')
 @section('main')
  <h1>Créer un Nouveau Post</h1>

@@ -12,15 +12,24 @@
             <h2 class="post-heading">{{ $post->title }}</h2>
             <p class="post-text">{{ $post->content }}</p>
             <div class="post-meta">
-                <p><strong>Catégorie :</strong> {{ $post->category->name }}</p>
+                <p><strong>Catégorie :</strong>
+                
+                <ul class="list-disc pl-5 mb-4">
+                @foreach ($categories as $category)
+                    <li class="text-gray-700">{{ $category->name }}</li>
+                @endforeach
+            </ul>
+            </p>
                 <p><strong>Auteur :</strong> {{ $post->user->name }}</p>
                 <p><strong>Publié le :</strong> {{ $post->created_at }}</p>
             </div>
-                        <form action="{{ route('posts.destroy', $post->id) }}" method="POST" onsubmit="return confirm('Voulez-vous vraiment supprimer ce post ?');">
+               <!--  
+                  <form action="{{ route('posts.destroy', $post->id) }}" method="POST" onsubmit="return confirm('Voulez-vous vraiment supprimer ce post ?');">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Supprimer</button>
                 </form>
+                 -->
                 </article>
     </section>
 @endsection

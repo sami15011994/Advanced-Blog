@@ -9,7 +9,6 @@ main {
 }
 
 /* Form styles */
-
 form {
     display: flex;
     flex-direction: column;
@@ -55,7 +54,6 @@ button[type="submit"]:hover {
 }
 
 /* Optional: Style for form error messages */
-
 .alert {
     color: #721c24;
     background-color: #f8d7da;
@@ -66,7 +64,6 @@ button[type="submit"]:hover {
 }
 
 /* Optional: Style for success messages */
-
 .success {
     color: #155724;
     background-color: #d4edda;

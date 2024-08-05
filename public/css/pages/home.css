@@ -14,7 +14,6 @@ h1 {
     gap: 20px;
     padding: 20px;
 }
-
 .posts {
     text-align: center;
 }
@@ -80,6 +79,8 @@ h1 {
     color: #fff;
 }
 
+
+
 .latest {
     position: relative;
     width: 100%;
@@ -109,9 +110,30 @@ h1 {
     width: 80%;
     
 }
-
 .overlay-text > p {
     font-size: 1rem ;
     font-weight: 100;
     font-style: italic;
     }
+    /*alert*/
+
+    .alert {
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+    
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+    

@@ -1,7 +1,7 @@
 
 
 @extends('layout')
-
+<title>@yield('title', 'Contact')</title>
 @section('main')
 <div id="main-container">
     <h1>Contactez-nous</h1>

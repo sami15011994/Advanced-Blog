@@ -1,4 +1,4 @@
-<!-- resources/views/components/post-form.blade.php -->
+
 <form action="{{ $action }}" method="POST">
     @csrf
     @if ($method !== 'POST')

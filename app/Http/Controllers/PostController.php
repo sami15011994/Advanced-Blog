@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use auth;
+
 use App\Models\Post;
 use App\Models\category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -14,10 +15,11 @@ class PostController extends Controller
      */
     public function home()
     {
+        $shouldShowLoginButton = true;
         $lastestPostId = Post::latest()->first()->id ;
         $posts = Post::with('image')->where('id', '!=',$lastestPostId)->paginate(10);
         $latestPost = Post::with('image')->latest()->first();
-        return view('posts.home', [ 'posts'=>$posts ,'latestPost' => $latestPost]);
+        return view('posts.home', [ 'posts'=>$posts ,'latestPost' => $latestPost ,'shouldShowLoginButton' =>$shouldShowLoginButton]);
     }
 
     /**
@@ -44,30 +46,17 @@ class PostController extends Controller
         $post = Post::create(['title' => $request->input('title'),
         'content' => $request->input('content'),
         'category_id' => $request->input('category_id'),
-        //'user_id' => auth()->id(), // Ajouter l'ID de l'utilisateur authentifié);
-        'user_id' => 10,
+        'user_id' => auth()->id(), // Ajouter l'ID de l'utilisateur authentifié);
+        
     ]);
         return redirect()->route('posts.home')->with('success', 'Post created successfully!');
     }
     public function show(string $id)
     {
-     //$post = Post::findOrFail($id);
-    // Exemple de données de test pour simuler un post
-    $post = new \stdClass();
-    $post->id = $id;
-    $post->title = 'Titre du Post';
-    $post->content = 'Contenu du Post...';
-
-    $category = new \stdClass();
-    $category->name = 'Catégorie du Post';
-
-    $user = new \stdClass();
-    $user->name = 'Auteur du Post';
-
-    $post->category = $category;
-    $post->user = $user;
-    $post->created_at = now();
-     return view('posts.show', compact('post'));
+    $post = Post::findOrFail($id);
+    $categories= $post->categories ;
+   
+     return view('posts.show', compact('post','categories'));
     }
 
     /**
@@ -75,11 +64,16 @@ class PostController extends Controller
      */
     public function edit(string $id)
     {   $post = Post::findOrFail($id);
-        $categories = category::all();
+        if ($post->user_id !== Auth::id()) {
+            return redirect()->route('posts.home')->with('error', 'Vous ne pouvez pas éditer ce post.');
+        }
+    $categories = category::all();
+        
          // Exemple de titre et de contenu pour le test
     //$post->title = 'Titre de test';
     //$post->content = 'Contenu de test';
-        return view('posts.create',compact('post','categories'));
+    
+        return view('posts.edit',compact('post','categories'));
     }
 
     /**
@@ -102,32 +96,29 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+   public function destroy(string $id)
     {
         $post = Post::findOrFail($id);
+        $post->categories()->detach();
+         dd('supprimer');
         $post->delete();
-
+        
         // Rediriger avec un message de succès
         return redirect()->route('posts.home')->with('success', 'Le post a été supprimé avec succès.');
     }
 
 
-/*
+
    
 
-    public function about()
-    {
-        return view('posts.create');
-    }
-
-    public function contact(Request $request)
-    {
-        return view('posts.create');
-    }
+   
 
     public function articles()
     {
-        return view('posts.create');
+        $user = auth()->User();
+        $posts= $user->posts;
+        return view('posts.articles',compact('posts','user'));
     }
-*/    
+
+   
 }
