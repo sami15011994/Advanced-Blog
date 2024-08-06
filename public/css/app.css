@@ -794,8 +794,6 @@ video {
   border-bottom-width: 2px;
 }.border-l-4 {
   border-left-width: 4px;
-}.border-r {
-  border-right-width: 1px;
 }.border-t {
   border-top-width: 1px;
 }.border-gray-100 {
@@ -807,9 +805,6 @@ video {
 }.border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
-}.border-gray-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }.border-indigo-400 {
   --tw-border-opacity: 1;
   border-color: rgb(129 140 248 / var(--tw-border-opacity));
@@ -818,6 +813,9 @@ video {
 }.bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }.bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -928,8 +926,6 @@ video {
   padding-top: 1rem;
 }.pt-6 {
   padding-top: 1.5rem;
-}.pt-8 {
-  padding-top: 2rem;
 }.text-left {
   text-align: left;
 }.text-center {
@@ -1104,6 +1100,9 @@ video {
 }.hover\:bg-blue-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }.hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1125,6 +1124,9 @@ video {
 }.hover\:bg-red-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}.hover\:bg-red-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }.hover\:text-blue-700:hover {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
@@ -1283,8 +1285,6 @@ video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }.sm\:items-center {
     align-items: center;
-  }.sm\:justify-start {
-    justify-content: flex-start;
   }.sm\:justify-center {
     justify-content: center;
   }.sm\:justify-between {
@@ -1330,9 +1330,6 @@ video {
   }.dark\:bg-gray-800 {
     --tw-bg-opacity: 1;
     background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-  }.dark\:bg-gray-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   }.dark\:text-gray-300 {
     --tw-text-opacity: 1;
     color: rgb(209 213 219 / var(--tw-text-opacity));

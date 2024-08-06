@@ -20,9 +20,10 @@ public function categories()
 {
 	return $this->BelongsToMany(category::class ,'post_category', 'post_id', 'category_id');
 }
+//relation post comments one to many
 public function comments() 
 {
-	return $this->BelongsToMany(Comment::class);
+	return $this->hasMany(Comment::class);
 }
 public function image(){
 	return $this->hasOne(Image::class);

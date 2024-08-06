@@ -55,8 +55,8 @@ class PostController extends Controller
     {
     $post = Post::findOrFail($id);
     $categories= $post->categories ;
-   
-     return view('posts.show', compact('post','categories'));
+    $comments = $post->comments;
+     return view('posts.show', compact('post','categories','comments'));
     }
 
     /**
